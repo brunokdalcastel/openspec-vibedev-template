@@ -1,0 +1,31 @@
+# OpenSpec Configuration — Vibe Code Development (Security-First)
+schema: spec-driven
+
+rules:
+  # === SECURITY (non-negotiable) ===
+  - "ALWAYS validate ALL user input with a schema library (Zod, Joi, Pydantic) — no exceptions"
+  - "NEVER use string concatenation for SQL — ALWAYS use ORM or parameterized queries"
+  - "NEVER expose internal errors, stack traces, or DB errors to the client"
+  - "NEVER hardcode secrets, API keys, DB URLs, or tokens in source code"
+  - "ALWAYS implement rate limiting on public-facing and authenticated endpoints"
+  - "ALWAYS check authorization SERVER-side — never trust client-side alone"
+  - "NEVER disable security features 'temporarily' or 'for testing'"
+  - "ALWAYS set security headers (CSP, HSTS, X-Frame-Options, X-Content-Type-Options)"
+  - "ALWAYS sanitize user-generated content before rendering (XSS prevention)"
+  - "ALWAYS use httpOnly + Secure + SameSite cookies for auth tokens"
+
+  # === CODE QUALITY ===
+  - "ALWAYS use strict types (TypeScript strict / Python type hints)"
+  - "ALWAYS include error handling in async code"
+  - "ALWAYS write tests for business logic and security validations"
+  - "ALWAYS run linter before marking tasks complete"
+
+  # === AI GUARDRAILS ===
+  - "When generating API endpoints: ALWAYS include input validation, auth check, rate limit, error handling"
+  - "When generating DB queries: ALWAYS use ORM — raw SQL only if parameterized"
+  - "When generating forms: ALWAYS include CSRF protection and client+server validation"
+  - "When generating file uploads: ALWAYS validate type (magic bytes), size, sanitize filename"
+  - "When generating auth: ALWAYS use established library — NEVER roll custom auth"
+
+context:
+  - openspec/project.md

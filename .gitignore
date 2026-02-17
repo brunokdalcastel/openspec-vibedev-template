@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnp/
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Build
+.next/
+dist/
+build/
+out/
+
+# DB
+*.sqlite
+*.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Test
+coverage/
+.nyc_output/
+
+# Logs
+*.log
+npm-debug.log*
