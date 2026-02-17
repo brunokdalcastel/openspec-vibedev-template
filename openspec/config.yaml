@@ -26,6 +26,9 @@ rules:
   - "When generating forms: ALWAYS include CSRF protection and client+server validation"
   - "When generating file uploads: ALWAYS validate type (magic bytes), size, sanitize filename"
   - "When generating auth: ALWAYS use established library — NEVER roll custom auth"
+  - "ALWAYS explain changes in simple terms — the developer is from infrastructure, not software development"
+  - "ALWAYS write explanations in Portuguese (pt-BR)"
 
 context:
+  - AI-INSTRUCTIONS.md
   - openspec/project.md
